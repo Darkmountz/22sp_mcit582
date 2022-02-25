@@ -9,7 +9,7 @@ w3 = Web3(Web3.HTTPProvider('http://' + IP_ADDR + ':' + PORT))
 #     This line will mess with our autograders, but might be useful when debugging
 #     print( "Connected to Ethereum node" )
 if w3.isConnected():
-#    print("Connected to Ethereum node")
+    print("Connected!")
 else:
     print("Failed to connect to Ethereum node!")
 
@@ -63,7 +63,7 @@ def get_most_expensive_transaction(block_num):  # YOUR CODE HERE
 
     return most_cost_transaction
 
-
+#
 # print('q1:')
 # transaction_hash = '0x0dda1142828634746a8e49e707fddebd487355a172bfa94b906a151062299578'
 # print(get_transaction(transaction_hash))
@@ -85,7 +85,7 @@ def get_most_expensive_transaction(block_num):  # YOUR CODE HERE
 # print()
 # print(fee / (10237110 - 10237100))
 # print(round(fee / 1e18 / (10237110 - 10237100), 2))
-
+#
 # print()
 # print('q3:')
 # mine_fee = get_block_cost(10237208) / 1e18 + 2
@@ -96,6 +96,6 @@ def get_most_expensive_transaction(block_num):  # YOUR CODE HERE
 # transaction_hash = transaction.hex()
 # print(transaction)
 # print(transaction_hash)
-
-
-
+#
+#
+#
