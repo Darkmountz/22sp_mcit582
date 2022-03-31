@@ -38,7 +38,7 @@ def shutdown_session(response_or_exc):
 
 def log_message(d):
     # Takes input dictionary d and writes it to the Log table
-    return Log(message=json.dump(d['payload']))
+    return Log(message=json.dumps(d['payload']))
 
 
 def verify(content, platform):
@@ -72,9 +72,7 @@ def commit(content, is_valid):
         g.session.add(order)
         g.session.commit()
     else:
-        g.session.add(log_message(content))
-        g.session.commit()
-
+        log_message(content)
     return is_valid
 
 
